@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="productos">
+    <div class="card">
+        <img src="img/Bo1.jpg" alt="Boquillas para aerosoles">
+        <div class="card-content">
+            <h3>Boquillas para aerosoles</h3>
+            <p>Dale diferentes efectos a tus trazos con estas boquillas.</p>
+            <p class="price">$4.99</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/Bo1.jpg" alt="Boquillas para aerosoles">
+        <div class="card-content">
+            <h3>Latas</h3>
+            <p>Dale diferentes efectos a tus trazos con estas boquillas.</p>
+            <p class="price">$4.99</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/Bo1.jpg" alt="Boquillas para aerosoles">
+        <div class="card-content">
+            <h3>Latas rg</h3>
+            <p>Dale diferentes efectos a tus trazos con estas boquillas.</p>
+            <p class="price">$4.99</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/Bo1.jpg" alt="Boquillas para aerosoles">
+        <div class="card-content">
+            <h3>Latas xd </h3>
+            <p>Dale diferentes efectos a tus trazos con estas boquillas.</p>
+            <p class="price">$4.99</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/Bo1.jpg" alt="Boquillas para aerosoles">
+        <div class="card-content">
+            <h3>brochas</h3>
+            <p>Dale diferentes efectos a tus trazos con estas boquillas.</p>
+            <p class="price">$4.99</p>
+            <button class="buy-btn">Comprar</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let params = new URLSearchParams(window.location.search);
+        let searchQuery = params.get("search");
+    
+        if (searchQuery) {
+            buscarProductos(searchQuery.toLowerCase());
+        }
+    });
+    
+    function buscarProductos(searchQuery) {
+        let productos = document.querySelectorAll(".card");
+        let encontrado = false;
+        let primerProducto = null;
+    
+        productos.forEach(producto => {
+            let nombreProducto = producto.querySelector("h3").textContent.toLowerCase();
+    
+            if (nombreProducto.includes(searchQuery)) {
+                producto.style.display = "block";
+                if (!primerProducto) {
+                    primerProducto = producto;
+                }
+                encontrado = true;
+            } else {
+                producto.style.display = "none";
+            }
+        });
+    
+        if (!encontrado) {
+            alert("Producto no encontrado.");
+        }
+    
+        if (primerProducto) {
+            primerProducto.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    </script>
+    
+</body>
+</html>

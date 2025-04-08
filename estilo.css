@@ -1,0 +1,203 @@
+/* Importar fuente graffiti desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Si tienes una fuente descargada, agrégala aquí */
+@font-face {
+    font-family: 'GraffitiStyle';
+    src: url('fonts/graffiti.ttf') format('truetype'); /* Cambia la ruta si es necesario */
+}
+
+/* Estilos generales */
+body {
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    background-image: url('img/fondo1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #000000, #00ff1a);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 15px #77ff00;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Permanent Marker', cursive; /* Fuente graffiti */
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px #80ff00, 6px 6px 5px #000000;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: drop-shadow(0 0 5px #48ff00);
+}
+
+/* NAVEGACIÓN */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive; /* Fuente graffiti */
+    text-shadow: 0 0 5px #95ff00, 0 0 10px #000000;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #88ff00;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-bar {
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #48ff00;
+    border-radius: 25px;
+    padding-left: 1em;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 10px #000000, 0 0 15px #33ff00;
+}
+
+.search-bar::placeholder {
+    color: #ccc;
+    text-shadow: 0 0 5px #88ff00;
+}
+
+/* MAIN */
+main {
+    padding: 2em;
+}
+
+/* TITULOS */
+h1, h2 {
+    font-family: 'GraffitiStyle', 'Permanent Marker', cursive; /* Usa la fuente personalizada si está disponible */
+    color: #ffffff;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px #ff00ff, 7px 7px 5px #00ffff;
+}
+
+/* CAROUSEL */
+.carousel {
+    margin: 2em 0;
+}
+
+.carousel img {
+    width: 50%;
+    height: auto;
+    box-shadow: 0 0 15px #ff00ff, 0 0 20px #00ffff;
+    border-radius: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.card {
+    color: #fff;
+    background: linear-gradient(145deg, #111, #222);
+    border: 2px solid #ff00ff;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 10px #ff00ff, 
+        0 0 20px #00ffff, 
+        0 0 30px #ff00ff;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 15px #ff00ff, 
+        0 0 25px #00ffff, 
+        0 0 35px #ff00ff;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1em;
+    font-family: 'GraffitiStyle', 'Permanent Marker', cursive;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #ff00ff;
+}
+
+.buy-btn {
+    background-color: #ff00ff;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 0 0 5px #000;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #84ff00, #000000);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 15px #1aff00;
+}
+
+html {
+    scroll-behavior: smooth;
+}

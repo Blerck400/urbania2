@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacto - Estilo Urbano</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+        }
+
+        header {
+            background: linear-gradient(to right, #00fff0, #ff00c8);
+            padding: 1.5rem;
+            text-align: center;
+            color: #111;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            box-shadow: 0 0 15px #00fff0;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background-color: #1a1a1a;
+            border: 2px solid #00fff0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 15px #00fff066;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px #ff00c855;
+        }
+
+        .contact-name {
+            font-size: 1.5rem;
+            color: #00fff0;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 5px #00fff0;
+        }
+
+        .contact-email {
+            color: #ff00c8;
+            font-size: 1rem;
+            text-shadow: 0 0 5px #ff00c8;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Contacto del Crew</h1>
+</header>
+
+<main>
+    <div class="contact-card">
+        <div class="contact-name">Julio Gerardo Gabino Suárez</div>
+        <div class="contact-email">julio.gabino@example.com</div>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-name">Diego Contreras Abundis</div>
+        <div class="contact-email">diego.contreras@example.com</div>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-name">Carlos Adrián Ramírez Jiménez</div>
+        <div class="contact-email">carlos.ramirez@example.com</div>
+    </div>
+</main>
+
+</body>
+</html>
